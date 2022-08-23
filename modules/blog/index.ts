@@ -23,7 +23,7 @@ const blogModule: Module = function() {
     })
   
     // Register Store using a Plugin
-    this.addPlugin(path.resolve(__dirname, 'store/registerStore.js'))
+    this.addPlugin(path.resolve(__dirname, 'store/blog.ts'))
 }
 
 export default blogModule

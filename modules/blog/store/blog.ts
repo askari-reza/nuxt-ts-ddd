@@ -1,11 +1,11 @@
 /**
  *  Vuex Module
  */
-
-import { Module, VuexModule, getModule } from "vuex-module-decorators";
+import { NuxtAppOptions } from "@nuxt/types";
+import { Module, VuexModule } from "vuex-module-decorators";
 
 @Module({
-  name: "blogModule",
+  name: "blog",
   stateFactory: true,
   namespaced: true,
 })
@@ -41,4 +41,6 @@ class Blog extends VuexModule {
   ];
 }
 
-export default getModule(Blog);
+export default ({ store }: NuxtAppOptions) => {
+  return store?.registerModule("blog", Blog);
+};

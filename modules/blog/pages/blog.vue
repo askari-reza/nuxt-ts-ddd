@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Cogito ergo sum</h1>
     <h2 class="font-bold text-3xl mb-5">Our Blog</h2>
     <blog-article-list />
   </div>
